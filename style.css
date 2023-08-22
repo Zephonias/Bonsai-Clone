@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /*padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;*/
+    font-family: 'Open Sans', sans-serif;
+}
+.main{
+    margin-top: 250px;
+}
+.back{
+    position: absolute;
+    margin-top: -900px;
+    margin-left: 400px;
+    width: 70rem;
+    height: 90rem;
+    background: #F2FAFF;
+    transform: rotate(60deg);
+    z-index: -5;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    padding: auto auto;
+    width: 100%;
+    height: 77px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    z-index: 10;
+}
+.navbar .logo{
+    max-width: 150px;
+}
+.nav .navlist{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.nav ul li {
+    margin: auto 2rem;
+}
+.nav ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .login{
+    display: flex;
+    align-items: center;
+}
+.navbar .login .log{
+    text-decoration: none;
+    margin: auto 1rem;
+    padding: 12px 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #00b289;
+    border: 1px solid #00b289;
+    border-radius: 5px;
+}
+.navbar .login .free{
+    text-decoration: none;
+    margin: auto 1rem;
+    padding: 12px 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background: #00b289;
+    border: 1px solid #00b289;
+    border-radius: 5px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    
+}
+.header h3{
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 400;
+}
+.toggle h5{
+    font-size: 30px;
+    font-weight: lighter;
+}
+.header .toggle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: lighter;
+    margin: auto 25px;
+}
+.header .toggle h5, .header .toggle img{
+    margin: 0 20px;
+}
+
+.subscriptions{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 0;
+    margin: 50px auto 0 auto;
+}
+.subscriptions .starter, .subscriptions .professional, .subscriptions .business {
+    width: 29%;
+    height: 800px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 30px;
+    background: #fff;
+    border: 0.1px solid #D8D9DA;
+    z-index: 1;
+}
+.subscriptions .starter .plan-type, .subscriptions .professional .plan-type, .subscriptions .business .plan-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 10px;
+    width: 100%;
+    height: 10%;
+    gap: 15px;
+}
+.subscriptions .starter .plan-type p, .subscriptions .professional .plan-type p, .subscriptions .business .plan-type p{
+    width: 80%;
+    font-size: 12px;
+}
+.subscriptions .starter .amount, .subscriptions .professional .amount, .subscriptions .business .amount{
+    display: flex;
+    justify-content: flex-start;
+    /*align-items: center;*/
+    width: 100%;
+    height: 10%;
+}
+.subscriptions .starter .plan-details ul, .subscriptions .professional .plan-details ul, .subscriptions .business .plan-details ul{
+    list-style: none;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px
+}
+.subscriptions .starter .plan-details, .subscriptions .professional .plan-details, .subscriptions .business .plan-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.subscriptions .starter .plan-button, .subscriptions .professional .plan-button, .subscriptions .business .plan-button{
+    text-align: center;
+}
+.amount h1{
+    margin: 0 10px;
+    font-size: 50px;
+}
+.amount h3{
+    font-weight: lighter;
+}
+.amount h3{
+    margin: 0 10px;
+    align-self: self-end;
+}
+.plan-details .details{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: auto;
+}
+.plan-details .details li{
+    word-wrap: break-word;
+}
+.plan-button{
+    margin-bottom: 30px;
+}
+.plan-button a{
+    text-decoration: none;
+    background: #00b289;
+    color: #fff;
+    padding: 20px 60px;
+    border-radius: 5px;
+}
+.subscriptions .starter hr, .subscriptions .professional hr, .subscriptions .business hr{
+    border: 1px solid #00b289;
+}
+
+.add-ons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px auto 0 auto;
+}
+.add-ons .Title-Super{
+    margin-bottom: 40px ;
+}
+.add-ons .collaborators, .add-ons .partners, .add-ons .tax{
+    margin: 10px 10px;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    background: #fff;
+    border: 1px solid #D8D9DA;
+    box-shadow: 2px 2px 2px 2px #D8D9DA;
+    border-radius: 5px;
+}
+.content{
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 50px;
+    padding: 0;
+}
+.content p{
+    font-size: 15px;
+    font-weight: lighter;
+}
+.type{
+    text-align: center;
+    width: 10%;
+}
+.content a{
+    text-decoration: none;
+}
+.down{
+    display: flex;
+    align-items: center;
+}
+.content .down .learn-more{
+    color: #00b289;
+}
+
+.your{
+    margin: 150px auto 80px auto;
+    padding: 80px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    background: #F2FAFF;
+    border-radius: 15px;
+}
+.your h2{
+    font-size: 40px;
+    text-align: left;
+}
+.your h2 span{
+    color: #00b289;
+}
+.your a{
+    text-decoration: none;
+    padding: 15px 25px;
+    background: #00b289;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.faq{
+    text-align: center;
+}
+.faq h2{
+    color: #00b289;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.faq .faq-choice{
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.faq .faq-choice h3{
+    margin-right: 150px;
+    font-size: 20px;
+}
+.faq .faq-choice h3:hover{
+    color: #00b289;
+    cursor: pointer;
+}
+
+.footer{
+    margin: 150px auto 80px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.footer a{
+    text-decoration: none;
+}
+.footer ul li{
+    list-style: none;
+    line-height: 2rem;
+    color: #000000;
+    font-weight: lighter;
+}
+.footer h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+.choice-title{
+    margin-bottom: 10px;
+}
+.gap{
+    margin-top: 32px;
+}
+.gap .green{
+    color: #00b289;
+}
+.footer p{
+    margin-top: 32px;
+    font-weight: 500;
+}
+.down li{
+    display: flex;
+    align-items: center;
+}
