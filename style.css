@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+    color: #4e4c4c;
+}
 body{
-    /*padding-top: 100px;
-    padding-left: 150px;
-    padding-right: 150px;*/
     font-family: 'Open Sans', sans-serif;
 }
 .main{
@@ -16,22 +17,24 @@ body{
     position: absolute;
     margin-top: -900px;
     margin-left: 400px;
-    width: 70rem;
+    width: 100%;
     height: 90rem;
+    border-radius: 30px;
     background: #F2FAFF;
     transform: rotate(60deg);
     z-index: -5;
-}
+} 
 .navbar{
     position: fixed;
     top: 0;
-    padding: auto auto;
-    width: 100%;
+    padding: 10px 30px;
+    width: 100vw;
     height: 77px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: #fff;
+    color: #4e4c4c;
     z-index: 10;
 }
 .navbar .logo{
@@ -42,12 +45,11 @@ body{
     display: flex;
     justify-content: space-around;
     font-size: 15px;
-}
-.nav ul li {
-    margin: auto 2rem;
+    margin-right: -150px;
 }
 .nav ul li{
     display: flex;
+    margin: auto 10px;
     justify-content: space-between;
     align-items: center;
 }
@@ -64,6 +66,10 @@ body{
     color: #00b289;
     border: 1px solid #00b289;
     border-radius: 5px;
+}
+.login .log:hover{
+    color: #fff;
+    background: #00b289;
 }
 .navbar .login .free{
     text-decoration: none;
@@ -104,11 +110,12 @@ body{
 }
 
 .subscriptions{
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     flex: 1 1 0;
     margin: 50px auto 0 auto;
+    flex-shrink: 1;
 }
 .subscriptions .starter, .subscriptions .professional, .subscriptions .business {
     width: 29%;
@@ -158,6 +165,13 @@ body{
     width: 100%;
     height: 100%;
 }
+.plan-details .details .check{
+    width: 10%;
+    color: #00b289;
+}
+.plan-details .details .text{
+    width: 90%
+}
 .subscriptions .starter .plan-button, .subscriptions .professional .plan-button, .subscriptions .business .plan-button{
     text-align: center;
 }
@@ -176,12 +190,17 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     flex: auto;
+    width: 100%;
 }
 .plan-details .details li{
     word-wrap: break-word;
+}
+.details i{
+    margin-right: 5px;
+    color: #00b289;
 }
 .plan-button{
     margin-bottom: 30px;
@@ -202,6 +221,7 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 80px auto 0 auto;
+    flex-shrink: 1;
 }
 .add-ons .Title-Super{
     margin-bottom: 40px ;
@@ -298,7 +318,7 @@ body{
     margin: 150px auto 80px auto;
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 70%;
 }
 .footer a{
     text-decoration: none;
@@ -306,8 +326,10 @@ body{
 .footer ul li{
     list-style: none;
     line-height: 2rem;
-    color: #000000;
     font-weight: lighter;
+}
+.footer ul li a{
+    color: #4e4c4c
 }
 .footer h3{
     font-size: 15px;
@@ -330,4 +352,140 @@ body{
 .down li{
     display: flex;
     align-items: center;
+}
+
+
+@media screen and (max-width: 1130px) {
+    html{
+        overflow-x: hidden!important;
+    }
+    .navbar .nav, .navbar .login{
+        display: none;
+    }
+    .navbar .logo{
+        display: flex;
+        justify-content: center;
+    }
+    .subscriptions{
+        display: block;
+    }
+    .subscriptions .starter, .subscriptions .professional, .subscriptions .business{
+        width: 100%;
+        height: 90%;
+        margin: 20px;
+    }
+    .plan-button{
+        width: 100%;
+        margin: 50px 0;
+        background: #00b289;
+        padding: 20px 0;
+        border-radius: 5px;
+    }
+    .content{
+        margin: 0;
+        text-align: left;
+    }
+    .faq .faq-choice h3{
+        text-align: left;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    .faq .faq-choice{
+        margin: 20px auto 0 auto;
+        display: flex;
+        align-items: flex-start;
+        width: 40%;
+    }
+    /*.footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 100px;
+    }
+    .footer .product, .footer .resources, .footer .bonsai{
+        margin-top: 50px;
+    }*/
+}
+@media screen and (max-width: 650px){
+    html{
+        overflow-x: hidden!important;
+    }
+    .main{
+        margin-top: 100px;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header h3{
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .header .toggle{
+        text-align: center;
+    }
+    .navbar .nav, .navbar .login{
+        display: none;
+    }
+    .navbar .logo{
+        display: flex;
+        justify-content: center;
+    }
+    .subscriptions{
+        display: block;
+    }
+    .subscriptions .starter, .subscriptions .professional, .subscriptions .business{
+        width: 100%;
+        height: 90%;
+        margin: 20px;
+    }
+    .plan-button{
+        width: 100%;
+        margin: 50px 0;
+    }
+    .plan-button a{
+        padding: 20px auto;
+        text-align: center;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 100px;
+    }
+    .footer .product, .footer .resources, .footer .bonsai{
+        margin-top: 50px;
+    }
+    .add-ons .collaborators, .add-ons .partners, .add-ons .tax{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .add-ons .collaborators .type, .add-ons .partners .type, .add-ons .tax .type{
+        width: 100%;
+        padding: auto;
+        text-align: left;
+    }
+    .add-ons .collaborators .content, .add-ons .partners .content, .add-ons .tax .content{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: auto;
+        width: 100%;
+    }
+
+    .add-ons .Title-Super{
+        text-align: center;
+    }
+    .your{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .your a{
+        margin-top: 20px;
+    }
 }
