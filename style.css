@@ -17,7 +17,7 @@ body{
     position: absolute;
     margin-top: -900px;
     margin-left: 400px;
-    width: 100%;
+    width: 70rem;
     height: 90rem;
     border-radius: 30px;
     background: #F2FAFF;
@@ -491,5 +491,10 @@ body{
     }
     .your a{
         margin-top: 20px;
+    }
+}
+@media screen and (max-width: 450px){
+    html, body{
+        overflow-x: hidden!important;
     }
 }
